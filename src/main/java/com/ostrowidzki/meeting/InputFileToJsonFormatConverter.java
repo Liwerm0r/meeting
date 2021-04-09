@@ -6,7 +6,7 @@ public class InputFileToJsonFormatConverter {
 
     String directory = "./src/main/resources/";
     String inputFileName = "calendar.txt";
-    String outputFileName = "calendarJson.txt";
+    String outputFileName = "calendar_Json.txt";
 
     public void generateJsonFormattedFile() throws IOException {
 
@@ -34,7 +34,7 @@ public class InputFileToJsonFormatConverter {
         }
     }
 
-    public String stringifyWord(String word) {
+    private String stringifyWord(String word) {
         return "\"" + word.substring(0, word.length() - 1) + "\"" + word.substring(word.length() - 1);
     }
 
