@@ -1,7 +1,6 @@
 package com.ostrowidzki.meeting;
 
 import java.io.*;
-import java.util.Arrays;
 
 public class InputFileToJsonFormatConverter {
 
@@ -25,8 +24,8 @@ public class InputFileToJsonFormatConverter {
                         }
                     }
                 }
-                outputFileText.append(line).append(System.lineSeparator());
-
+//                outputFileText.append(line).append(System.lineSeparator());
+                outputFileText.append(line);
             }
             bw.write(String.valueOf(outputFileText));
 

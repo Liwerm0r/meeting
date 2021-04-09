@@ -1,1 +1,47 @@
-meeting "duration": [00:30]%n%n{%n "working_hours": {%n "start": "09:00",%n "end": "19:55"%n },%n "planned_meeting": [%n {%n "start": "09:00",%n "end": "10:30"%n },%n {%n "start": "12:00",%n "end": "13:00"%n },%n {%n "start": "16:00",%n "end": "18:00"%n }%n ]%n}%n%n%n{%n "working_hours": {%n "start": "10:00",%n "end": "18:30"%n },%n "planned_meeting": [%n {%n "start": "10:00",%n "end": "11:30"%n },%n {%n "start": "12:30",%n "end": "14:30"%n },%n {%n "start": "14:30",%n "end": "15:00"%n },%n {%n "start": "16:00",%n "end": "17:00"%n }%n ]%n
+meeting "duration": [00:30]
+
+{
+ "working_hours": {
+ "start": "09:00",
+ "end": "19:55"
+ },
+ "planned_meeting": [
+ {
+ "start": "09:00",
+ "end": "10:30"
+ },
+ {
+ "start": "12:00",
+ "end": "13:00"
+ },
+ {
+ "start": "16:00",
+ "end": "18:00"
+ }
+ ]
+}
+
+
+{
+ "working_hours": {
+ "start": "10:00",
+ "end": "18:30"
+ },
+ "planned_meeting": [
+ {
+ "start": "10:00",
+ "end": "11:30"
+ },
+ {
+ "start": "12:30",
+ "end": "14:30"
+ },
+ {
+ "start": "14:30",
+ "end": "15:00"
+ },
+ {
+ "start": "16:00",
+ "end": "17:00"
+ }
+ ]
