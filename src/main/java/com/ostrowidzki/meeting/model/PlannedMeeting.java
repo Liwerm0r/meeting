@@ -1,15 +1,37 @@
 package com.ostrowidzki.meeting.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.time.LocalTime;
 import java.util.List;
 
 public class PlannedMeeting {
-    List<Meeting> meetings;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
+    private LocalTime start;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm")
+    private LocalTime end;
 
-    public List<Meeting> getMeetings() {
-        return meetings;
+    public LocalTime getStart() {
+        return start;
     }
 
-    public void setMeetings(List<Meeting> meetings) {
-        this.meetings = meetings;
+    public void setStart(LocalTime start) {
+        this.start = start;
+    }
+
+    public LocalTime getEnd() {
+        return end;
+    }
+
+    public void setEnd(LocalTime end) {
+        this.end = end;
+    }
+
+    @Override
+    public String toString() {
+        return "PlannedMeeting{" +
+                "start=" + start +
+                ", end=" + end +
+                '}';
     }
 }

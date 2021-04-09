@@ -4,11 +4,11 @@ import java.io.*;
 
 public class InputFileToJsonFormatConverter {
 
-    String directory = "./src/main/resources/";
-    String inputFileName = "calendar.txt";
-    String outputFileName = "calendar_Json.txt";
+    private final String directory = "./src/main/resources/";
+    private final String inputFileName = "calendar.txt";
+    private final String outputFileName = "calendar_Json.txt";
 
-    public void generateJsonFormattedFile() throws IOException {
+    public void generateJsonFormattedFile() {
 
         try (BufferedReader br = new BufferedReader(new FileReader(directory + inputFileName));
             BufferedWriter bw = new BufferedWriter(new FileWriter(directory + outputFileName))) {

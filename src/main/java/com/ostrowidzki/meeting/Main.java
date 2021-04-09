@@ -7,8 +7,12 @@ public class Main {
 
         MeetingDurationExtractor extractor = new MeetingDurationExtractor();
         InputFileToJsonFormatConverter converter = new InputFileToJsonFormatConverter();
+        CalendarJsonMapper calendarJsonMapper = new CalendarJsonMapper();
+        MeetingScheduleCreator meetingScheduleCreator = new MeetingScheduleCreator(calendarJsonMapper);
 
         extractor.createMeetingDurationFile();
         converter.generateJsonFormattedFile();
+        String output = meetingScheduleCreator.findPossibleMeetings();
+        System.out.println(output);
     }
 }

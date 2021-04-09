@@ -25,4 +25,12 @@ public class WorkingHours {
     public void setEnd(LocalTime end) {
         this.end = end;
     }
+
+    @Override
+    public String toString() {
+        return "WorkingHours{" +
+                "start=" + start +
+                ", end=" + end +
+                '}';
+    }
 }

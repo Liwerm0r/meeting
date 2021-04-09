@@ -4,13 +4,13 @@ import java.io.*;
 
 public class MeetingDurationExtractor {
 
-    String directory = "./src/main/resources/";
-    String inputFileName = "input.txt";
-    String outputMeetingDuration = "meeting_duration.txt";
-    String calendarFile = "calendar.txt";
-    String stringForSearch = "meeting duration";
+    private final String directory = "./src/main/resources/";
+    private final String inputFileName = "input.txt";
+    private final String outputMeetingDuration = "meeting_duration.txt";
+    private final String calendarFile = "calendar.txt";
+    private final String stringForSearch = "meeting duration";
 
-    public void createMeetingDurationFile() throws IOException {
+    public void createMeetingDurationFile() {
 
         try (BufferedReader br = new BufferedReader(new FileReader(directory + inputFileName));
              BufferedWriter bw = new BufferedWriter(new FileWriter(directory + outputMeetingDuration));
