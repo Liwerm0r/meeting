@@ -5,21 +5,26 @@ import java.io.*;
 public class MeetingDurationExtractor {
 
     String directory = "./src/main/resources/";
-    String inputFileName = "calendar.txt";
-    String outputFileName = "meeting_duration.txt";
+    String inputFileName = "input.txt";
+    String outputMeetingDuration = "meeting_duration.txt";
+    String calendarFile = "calendar.txt";
     String stringForSearch = "meeting duration";
 
     public void createMeetingDurationFile() throws IOException {
 
         try (BufferedReader br = new BufferedReader(new FileReader(directory + inputFileName));
-             BufferedWriter bw = new BufferedWriter(new FileWriter(directory + outputFileName))) {
+             BufferedWriter bw = new BufferedWriter(new FileWriter(directory + outputMeetingDuration));
+             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(directory + calendarFile))) {
+            StringBuilder calendarBuilder = new StringBuilder();
             String line = "";
             while ((line = br.readLine()) != null) {
                 if (line.contains(stringForSearch)) {
                     bw.write(extractMeetingDurationString(line));
-                    break;
+                } else {
+                    calendarBuilder.append(line);
                 }
             }
+            bufferedWriter.write(String.valueOf(calendarBuilder));
         } catch (IOException e) {
             e.printStackTrace();
         }

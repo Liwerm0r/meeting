@@ -12,7 +12,7 @@ public class InputFileToJsonFormatConverter {
 
         try (BufferedReader br = new BufferedReader(new FileReader(directory + inputFileName));
             BufferedWriter bw = new BufferedWriter(new FileWriter(directory + outputFileName))) {
-            StringBuilder outputFileText = new StringBuilder();
+            StringBuilder outputFileBuilder = new StringBuilder();
             String line = "";
             while ((line = br.readLine()) != null) {
                 if (line.contains(":")) {
@@ -24,10 +24,10 @@ public class InputFileToJsonFormatConverter {
                         }
                     }
                 }
-//                outputFileText.append(line).append(System.lineSeparator());
-                outputFileText.append(line);
+//                outputFileBuilder.append(line).append(System.lineSeparator());
+                outputFileBuilder.append(line);
             }
-            bw.write(String.valueOf(outputFileText));
+            bw.write(String.valueOf(outputFileBuilder));
 
         } catch (IOException e) {
             e.printStackTrace();

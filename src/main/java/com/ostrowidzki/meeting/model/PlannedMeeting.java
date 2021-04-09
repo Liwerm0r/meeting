@@ -1,4 +1,4 @@
-package com.ostrowidzki.meeting;
+package com.ostrowidzki.meeting.model;
 
 import java.util.List;
 

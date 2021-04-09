@@ -1,4 +1,4 @@
-package com.ostrowidzki.meeting;
+package com.ostrowidzki.meeting.model;
 
 public class Calendar {
     private WorkingHours workingHours;
