@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.List;
 
 
 public class MeetingScheduleCreator {
@@ -21,7 +22,19 @@ public class MeetingScheduleCreator {
     public String findPossibleMeetings() throws JsonProcessingException {
         Calendar[] calendars = calendarJsonMapper.MapCalendarDataToPojos();
         loadMeetingDuration();
-        return this.meetingDuration.toString();
+
+
+
+
+
+
+
+
+        return null;
+    }
+
+    private List<Gap> findGaps(Calendar calendar) {
+        return null;
     }
 
     private void loadMeetingDuration() {
@@ -34,6 +47,36 @@ public class MeetingScheduleCreator {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private class Gap {
+        private LocalTime start;
+        private LocalTime end;
+
+        public Gap() {
+
+        }
+
+        public Gap(LocalTime start, LocalTime end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        public LocalTime getStart() {
+            return start;
+        }
+
+        public void setStart(LocalTime start) {
+            this.start = start;
+        }
+
+        public LocalTime getEnd() {
+            return end;
+        }
+
+        public void setEnd(LocalTime end) {
+            this.end = end;
         }
     }
 }
