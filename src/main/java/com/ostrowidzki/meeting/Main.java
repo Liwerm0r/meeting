@@ -15,7 +15,6 @@ public class Main {
 
         extractor.createMeetingDurationFile();
         converter.generateJsonFormattedFile();
-        String output = meetingScheduleCreator.findPossibleMeetings();
-        System.out.println(output);
+        meetingScheduleCreator.printPossibleMeetings();
     }
 }
