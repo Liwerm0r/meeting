@@ -11,25 +11,21 @@ import java.io.IOException;
 
 public class CalendarJsonMapper {
 
-    private final String path = "./src/main/resources/test.txt";
+    private final String directory = "./src/main/resources/";
+    private final String calendarOneFileName = "calendar1.json";
+    private final String calendarTwoFileName = "calendar2.json";
 
-//    public List<Calendar> MapCalendarDataToPojo() throws JsonProcessingException {
-//        String json = readJsonFromFile();
-//        ObjectMapper mapper = new ObjectMapper();
-//        Calendar[] calendarArray = mapper.readValue(json, Calendar[].class);
-//        List<Calendar> calendarList = Arrays.asList(calendarArray);
-//        return calendarList;
-//    }
-
-    public Calendar MapCalendarDataToPojo() throws JsonProcessingException {
-        String json = readJsonFromFile();
+    public Calendar[] MapCalendarDataToPojos() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.findAndRegisterModules();
-        System.out.println(json);
-        return mapper.readValue(json, Calendar.class);
+        String calendarOneJson = readJsonFromFile(directory + calendarOneFileName);
+        String calendarTwoJson = readJsonFromFile(directory + calendarTwoFileName);
+        Calendar calendarOnePojo = mapper.readValue(calendarOneJson, Calendar.class);
+        Calendar calendarTwoPojo = mapper.readValue(calendarTwoJson, Calendar.class);
+        return new Calendar[]{calendarOnePojo, calendarTwoPojo};
     }
 
-    private String readJsonFromFile() {
+    private String readJsonFromFile(String path) {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             return br.readLine();
         } catch (IOException e) {

@@ -1,5 +1,8 @@
 package com.ostrowidzki.meeting;
 
+import com.ostrowidzki.meeting.fileprocessor.InputFileToJsonFormatConverter;
+import com.ostrowidzki.meeting.fileprocessor.MeetingDurationExtractor;
+
 import java.io.IOException;
 
 public class Main {

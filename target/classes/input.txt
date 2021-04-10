@@ -1,4 +1,4 @@
-meeting duration: [00:30]
+
 {
  working_hours: {
  start: "09:00",
@@ -19,6 +19,7 @@ meeting duration: [00:30]
  }
  ]
 }
+meeting duration: [00:30]
 {
  working_hours: {
  start: "10:00",

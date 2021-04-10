@@ -1,4 +1,4 @@
-package com.ostrowidzki.meeting;
+package com.ostrowidzki.meeting.fileprocessor;
 
 import java.io.*;
 
