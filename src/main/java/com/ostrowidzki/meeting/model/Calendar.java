@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+/**
+ * Class contains data provided by unwrapping json document with jackson library
+ */
 public class Calendar {
     @JsonProperty("working_hours")
     private WorkingHours workingHours;

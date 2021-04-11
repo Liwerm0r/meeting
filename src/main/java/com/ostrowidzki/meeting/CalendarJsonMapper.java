@@ -8,13 +8,20 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-
+/**
+ * Utility class for reading data from calendar[0-1].json and converting into Java Objects.
+ * Class uses jackson library for unwrapping and mapping
+ */
 public class CalendarJsonMapper {
 
     private final String directory = "./src/main/resources/";
     private final String calendarOneFileName = "calendar1.json";
     private final String calendarTwoFileName = "calendar2.json";
 
+    /**
+     *
+     * @return Array contains two Calendar Objects
+     */
     public Calendar[] MapCalendarDataToPojos() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.findAndRegisterModules();
